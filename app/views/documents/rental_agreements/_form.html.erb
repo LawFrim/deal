@@ -1,0 +1,29 @@
+<%= simple_form_for (['documents',@rental_agreement]) do |f| %>
+
+<div class="form-group">
+    <%= f.input :landlord, input_html: { class: "form-control"} %>
+    <%= f.input :tenant, input_html: { class: "form-control"} %>
+    <%= f.input :house_location, input_html: { class: "form-control"} %>
+    <%= f.input :house_layout, input_html: { class: "form-control"} %>
+    <%= f.input :house_size, input_html: { class: "form-control"} %>
+    <%= f.input :house_document, input_html: { class: "form-control"} %>
+    <%= f.input :house_mortgage, input_html: { class: "form-control"} %>
+    <%= f.input :house_usage, input_html: { class: "form-control"} %>
+    <%= f.input :house_maxpeoplenum, input_html: { class: "form-control"} %>
+    <%= f.input :lease_term_start, input_html: { class: "form-control"} %>
+    <%= f.input :lease_term_end, input_html: { class: "form-control"} %>
+    <%= f.input :rental_cycle, input_html: { class: "form-control"} %>
+    <%= f.input :rental_money, input_html: { class: "form-control"} %>
+    <%= f.input :rental_way, input_html: { class: "form-control"} %>
+    <%= f.input :rental_date, input_html: { class: "form-control"} %>
+    <%= f.input :rental_deposit, input_html: { class: "form-control"} %>
+    <%= f.input :other_pays, input_html: { class: "form-control"} %>
+    <%= f.input :landlord_name, input_html: { class: "form-control"} %>
+    <%= f.input :landlord_phone, input_html: { class: "form-control"} %>
+    <%= f.input :landlord_idcode, input_html: { class: "form-control"} %>
+    <%= f.input :tenant_name, input_html: { class: "form-control"} %>
+    <%= f.input :tenant_phone, input_html: { class: "form-control"} %>
+    <%= f.input :tenant_idcode, input_html: { class: "form-control"} %>
+</div>
+<%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submitting..." } %>
+<% end %>
