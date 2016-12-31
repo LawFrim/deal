@@ -1,0 +1,2 @@
+module Documents::RentalAgreementsHelper
+end

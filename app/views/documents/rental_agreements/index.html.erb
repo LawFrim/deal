@@ -1,0 +1,25 @@
+<div class="col-md-12">
+  <div class="group">
+    <%= link_to("新建租赁合同", new_documents_rental_agreement_path, class: "btn btn-primary pull-right") %>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Title</td>
+        <td>Description</td>
+        <td>Creator</td>
+        <td>Option</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @rental_agreements.each do |d| %>
+      <tr>
+        <td>
+          <%= link_to('合同',documents_rental_agreement_path(d)) %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
