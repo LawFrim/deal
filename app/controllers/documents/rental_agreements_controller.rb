@@ -15,7 +15,7 @@ class Documents::RentalAgreementsController < ApplicationController
   def create
     @rental_agreement = RentalAgreement.new(rental_agreement_params)
     if @rental_agreement.save
-      redirect_to documents_rental_agreements_path
+      redirect_to documents_rental_agreement_path(@rental_agreement)
     else
       render :new
     end
@@ -36,6 +36,22 @@ class Documents::RentalAgreementsController < ApplicationController
     flash[:alert] = "已经删除"
     redirect_to rental_agreements_path
   end
+
+  # 选择角色
+  def choice_role
+  end
+
+  # 房主新建合同
+  def new_from_landlord
+    @rental_agreement = RentalAgreement.new
+  end
+
+  # 房客新建合同
+  def new_from_tenant
+    @rental_agreement = RentalAgreement.new
+  end
+
+
 
   private
 

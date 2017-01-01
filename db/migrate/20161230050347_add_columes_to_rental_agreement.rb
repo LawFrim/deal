@@ -9,7 +9,7 @@ class AddColumesToRentalAgreement < ActiveRecord::Migration[5.0]
     # 房屋格局
     add_column :rental_agreements, :house_layout, :string
     # 房屋面积
-    add_column :rental_agreements, :house_size, :string
+    add_column :rental_agreements, :house_size, :integer
     # 相关证明文件
     add_column :rental_agreements, :house_document, :string
     # 是否抵押
@@ -17,7 +17,7 @@ class AddColumesToRentalAgreement < ActiveRecord::Migration[5.0]
     # 房屋用途
     add_column :rental_agreements, :house_usage, :string
     # 最多居住
-    add_column :rental_agreements, :house_maxpeoplenum, :string
+    add_column :rental_agreements, :house_maxpeoplenum, :integer
     # 租赁期开始
     add_column :rental_agreements, :lease_term_start, :datetime
     # 租赁期结束
