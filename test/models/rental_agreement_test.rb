@@ -17,11 +17,11 @@ end
 #  tenant             :string
 #  house_location     :string
 #  house_layout       :string
-#  house_size         :string
+#  house_size         :integer
 #  house_document     :string
 #  house_mortgage     :boolean
 #  house_usage        :string
-#  house_maxpeoplenum :string
+#  house_maxpeoplenum :integer
 #  lease_term_start   :datetime
 #  lease_term_end     :datetime
 #  rental_cycle       :string

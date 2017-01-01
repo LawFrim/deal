@@ -1,11 +1,6 @@
-<%= simple_form_for (['documents',@rental_agreement]) do |f| %>
+<%= simple_form_for (['documents',@rental_agreement])  do |f| %>
 
 <div class="form-group">
-
-<p>您是？</p>
-
-    <%= f.input :landlord, input_html: { class: "form-control"} %>
-    <%= f.input :tenant, input_html: { class: "form-control"} %>
 
     
 <p>您房屋的位置在？</p>    
@@ -25,12 +20,12 @@
 <p>该房屋最多可居住人数</p>
 <%= f.input :house_maxpeoplenum, label: false,input_html: { class: "form-control"} %>
 <p>租赁期开始日期</p>
-<%= f.input :lease_term_start, label: false,as: :date, start_year: Date.today.year - 90,
-                              end_year: Date.today.year - 12, discard_day: true,
+<%= f.input :lease_term_start, label: false,as: :date, start_year: Date.today.year - 12,
+                              end_year: Date.today.year+12, discard_day: true,
                               order: [:month, :year], input_html: { class: "form-control"} %>
 <p>租赁期结束日期</p>
-<%= f.input :lease_term_end, label: false,as: :date, start_year: Date.today.year - 90,
-                              end_year: Date.today.year - 12, discard_day: true,
+<%= f.input :lease_term_end, label: false,as: :date, start_year: Date.today.year - 12,
+                              end_year: Date.today.year+12, discard_day: true,
                               order: [:month, :year], input_html: { class: "form-control"} %>
 
 <p>房租支付周期</p>
@@ -52,13 +47,13 @@
 <%= f.input :landlord_phone, label: false,input_html: { class: "form-control"} %>
 <p>房主身份证号</p>
 <%= f.input :landlord_idcode, label: false,input_html: { class: "form-control"} %>
-<h6>房客信息</h6>
+<!-- <h6>房客信息</h6>
 <p>房客姓名</p>
-<%= f.input :tenant_name, label: false,input_html: { class: "form-control"} %>
+<%#= f.input :tenant_name, label: false,input_html: { class: "form-control"} %>
 <p>房客联系方式</p>
-<%= f.input :tenant_phone, label: false,input_html: { class: "form-control"} %>
+<%#= f.input :tenant_phone, label: false,input_html: { class: "form-control"} %>
 <p>房客身份证号</p>
-<%= f.input :tenant_idcode, label: false,input_html: { class: "form-control"} %>
-</div>
+<%#= f.input :tenant_idcode, label: false,input_html: { class: "form-control"} %>
+</div> -->
 <%= f.submit "提交", class: "btn btn-primary", data: { disable_with: "提交中..." } %>
 <% end %>
